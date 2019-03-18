@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 * {
     margin: 0;
@@ -10,23 +10,30 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.wrapper {
+    border-bottom: 1px solid #ededed;
+}
 .main {
-    width: 80%;
+    max-width: 1100px;
     margin: 0 auto;
-    background: linear-gradient(90deg, #ededed 0%, transparent 1%) 1px 0, #fff;
-    background-size: 24.9% 1px;
+    background: linear-gradient(90deg, #ededed 1px, transparent 0%) 1px, #fff;
+    background-size: calc(25% - 1px);
+    padding: 100px 0 120px;
 }
 
 .site-header {
-    padding: 100px 0 120px 0;
+    margin-bottom: 117px;
 }
 
 .nav {
-    line-height: 4;
+
 }
 
 .nav-list {
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-item {
@@ -34,19 +41,19 @@ body {
     font-size: 12px;
     font-weight: 900;
     letter-spacing: 3px;
-    width: 15%;
     text-transform: uppercase;
-    padding: 17px 0 20px 5px;
+}
+
+.nav-item:nth-child(2) {
+    transform: translateX(-132px);
 }
 
 .nav-item:nth-child(3) {
-    width: 38.8%;
-    padding: 0;
-    text-align: center;
+    transform: translateX(10px);
 }
 
-.nav-item:nth-child(4), .nav-item:nth-child(5) {
-    text-align: right;
+.nav-item:nth-child(4) {
+    transform: translateX(132px);
 }
 
 .nav-link {
@@ -56,7 +63,7 @@ body {
 
 
 .avatar {
-    display: inline-block;
+    display: flex;
     height: 52px;
     width: 52px;
     background: url(avatar.png);
@@ -65,9 +72,9 @@ body {
 }
 
 .title {
-    width: 41%;
     text-align: center;
-    margin: 114px auto 0;
+    font-size: 48px;
+    margin-bottom: 57px;
 }
 
 .link {
@@ -77,12 +84,14 @@ body {
 
 .social-list {
     list-style: none;
-    margin-top: 57px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
 }
 
 .social-item {
-    display: inline-block;  
+    display: flex;  
     margin-right: 30px;
 }
 
@@ -114,12 +123,85 @@ body {
     background-image: url(instagram.png);
 }
 
+.about-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 62px;
+}
+
+.about-item {
+    width: 45%;
+    margin-top: 59px;
+}
+
+.about-item:nth-child(-n+2) {
+    margin-top: 0;
+}
+
+.about-item:nth-child(2n) {
+    width: 42.8%;
+    margin-right: 52px;
+}
+
+.about-title {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 31px;
+}
+
+.about-content {
+    font-size: 16px;
+    line-height: 1.88;
+    color: #000000;
+}
+
+.about-link {
+    color: #007fff;
+    text-decoration: none;
+}
+
+.company-list {
+    list-style: none;
+    display: flex;
+    margin-bottom: 118px;
+}
+
+.company-item {
+    display: flex;  
+    margin-right: 140px;
+}
+
+.company-link {
+    display: inline-block;
+    background-size: cover;
+    text-indent: -9999px;
+}
+
+.google {
+    width: 129px;
+    height: 43px;
+    background-image: url(google.png);
+}
+
+.airbnd {
+    width: 138px;
+    height: 43px;
+    background-image: url(airbnb.png);
+}
+
+.dropbox {
+    width: 44px;
+    height: 42.4px;
+    background-image: url(dropbox.png);
+}
+
 .link-list {
     list-style: none;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    height: 250px;
+    justify-content: space-between;
 }
 
 .link-item {
@@ -127,14 +209,13 @@ body {
     height: 30px;
     font-size: 16px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.link-item:nth-last-child(4n) {
+.link-item:last-child {
     margin-bottom: 0;
-}
-
-.link-item:nth-last-child(-n+3) {
-    margin-left: auto;
 }
 
 .link-data {
@@ -150,15 +231,12 @@ body {
 }
 
 .footer {
-    width: 80%;
-    margin: 114px auto 122px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 114px 0 122px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.footer-text {
-    color: #000000;   
 }
 
 .footer-list {
