@@ -13,6 +13,7 @@ body {
 .wrapper {
     border-bottom: 1px solid #ededed;
 }
+
 .main {
     max-width: 1100px;
     margin: 0 auto;
@@ -21,12 +22,20 @@ body {
     padding: 100px 0 120px;
 }
 
-.site-header {
-    margin-bottom: 117px;
+.note {
+    position: absolute;
+    top: 22px;
+    left: -80px;
+    transform: rotate(-90deg);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #979797;
 }
 
-.nav {
-
+.site-header {
+    margin-bottom: 117px;
 }
 
 .nav-list {
@@ -66,7 +75,7 @@ body {
     display: flex;
     height: 52px;
     width: 52px;
-    background: url(avatar.png);
+    background: url(./images/avatar.png);
     background-size: cover;
     text-indent: -9999px;
 }
@@ -108,19 +117,70 @@ body {
 .twitter {
     height: 14px;
     width: 17px;
-    background-image: url(twitter.png);
+    background-image: url(./images/twitter.png);
 }
 
 .behance {
     height: 13px;
     width: 21px;
-    background-image: url(behance.png);
+    background-image: url(./images/behance.png);
 }
 
 .instagram {
     height: 16px;
     width: 16px;
-    background-image: url(instagram.png);
+    background-image: url(./images/instagram.png);
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    height: 1240px;
+    margin-bottom: 117px;
+}
+
+.images-item {
+    position: relative;
+    max-width: 520px;
+    margin-bottom: 60px;
+    margin-right: 60px;
+}
+
+.images-item:nth-child(2n) {
+    margin-bottom: 0;
+}
+
+.images-content {
+    max-width: 520px;
+}
+
+.images-text {
+    position: absolute;
+    bottom: 63px;
+    left: 60px;
+    width: 317px;
+}
+
+.images-button {
+    border-radius: 13.5px;
+    background-color: #ffe300;
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 3px 11px;
+    margin-bottom: 17px;
+    cursor: pointer;
+}
+
+.images-link {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #ffffff;
 }
 
 .about-list {
@@ -128,6 +188,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
     margin-bottom: 62px;
 }
 
@@ -182,19 +243,19 @@ body {
 .google {
     width: 129px;
     height: 43px;
-    background-image: url(google.png);
+    background-image: url(./images/google.png);
 }
 
 .airbnd {
     width: 138px;
     height: 43px;
-    background-image: url(airbnb.png);
+    background-image: url(./images/airbnb.png);
 }
 
 .dropbox {
     width: 44px;
     height: 42.4px;
-    background-image: url(dropbox.png);
+    background-image: url(./images/dropbox.png);
 }
 
 .link-list {
@@ -202,6 +263,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 .link-item {
@@ -228,6 +290,111 @@ body {
 
 .data {
     color: #979797;
+}
+
+.contacts {
+    max-width: 1100px;
+    padding-top: 117px; 
+    margin: 0 auto; 
+}
+
+.contacts-wrapper {
+    display: flex;
+}
+
+.contacts-block {
+    width: 230px;
+    margin-right: 45px;
+}
+
+.contacts-title {
+    font-size: 28px;
+    line-height: 1.07;
+    color: #000000;
+    margin-bottom: 61px;
+}
+
+.contacts-content {
+    font-size: 16px;
+    line-height: 1.88;
+    color: #000000;
+    margin-bottom: 33px;
+}
+
+.contacts-list {
+    display: flex;
+    align-items: center;
+}
+
+.form {
+   display: flex;
+   width: 75%;
+}
+
+.inputs {
+    width: 743px;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.input {
+    font-size: 16px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin-bottom: 29px;
+    outline: 0;
+}
+
+.input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
+    font-family: 'Lato';
+    font-size: 16px;
+    color: #cfcfcf;
+}
+
+.textarea {
+    font-family: 'Lato';
+    font-size: 16px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin-bottom: 29px;
+    outline: 0;
+    max-width: 743px;
+    max-height: 300px;
+    min-height: 56px;
+}
+
+.form-button {
+    width: 52px;
+    height: 52px;
+    background-image: url(./images/send.png);
+    background-color: #cfcfcf;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    text-indent: -9999px;
+    border: 0;
+    margin-left: 30px;
+    outline: 0;
+    cursor: pointer;
 }
 
 .footer {
